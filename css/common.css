@@ -535,6 +535,7 @@ footer {
   .main_section {
     height: 678px;
     position: relative;
+    overflow: hidden;
   }
   .direct_link {
     height: 30px;
