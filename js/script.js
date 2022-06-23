@@ -1,72 +1,62 @@
 $(document).ready(function () {
-
   //   메인 슬라이더
-
 
   //   반응형 슬라이더-----------------------------------------------------
   $(window)
     .resize(function () {
-              // pc 변수 생성
-      var main_page = 0;
-      var sliderX = 0;
-      var art_slider = 0;
-      var heart_slider = 162;
-      var mbti_slider = 162;
-      var heart_first = 0;
-      var mbti_first = 0;
       // 모바일----------------------------------------------
-      if (window.innerWidth <= 360) {
-              // 모바일 변수 재생성
+      if (window.innerWidth >= 360 && window.innerWidth <= 460) {
+        // 모바일  재생성
         var main_page = 0;
         var sliderX = 0;
         var art_slider = 0;
         var heart_slider = 60;
         var mbti_slider = 60;
         // 메인
-        $("#main_left_bt").click(function () {
-          main_page = main_page - 1;
-          if (main_page == -1) {
-            main_page = 2;
-          }
-        });
-        $("#main_right_bt").click(function () {
-          main_page = main_page + 1;
-          if (main_page == 3) {
-            main_page = 0;
-          }
-        });
-        setInterval(function () {
-          if (main_page == 0) {
-            $(".main_img").attr({ src: "images/main2.png" });
-            $(".main_left").attr({ src: "images/main1.png" });
-            $(".main_right").attr({ src: "images/main3.png" });
-            $("#main_link").attr({ href: "http://iamdesker.co.kr/" });
-            $("#main_link_bt").attr({ href: "http://iamdesker.co.kr/" });
-            $("#main_title").text("데스커");
-            $("#main_p1").text("What's in my room?");
-            $("#main_p2").html("나에게 꼬~옥 맞는 <br />책상은?");
-          }
-          if (main_page == 1) {
-            $(".main_img").attr({ src: "images/main3.png" });
-            $(".main_left").attr({ src: "images/main2.png" });
-            $(".main_right").attr({ src: "images/main1.png" });
-            $("#main_link").attr({ href: "http://bns003.keshsurvey.com/" });
-            $("#main_link_bt").attr({ href: "http://bns003.keshsurvey.com/" });
-            $("#main_title").text("바다 테스트");
-            $("#main_p1").text("알쏭달쏭한 바닷속!");
-            $("#main_p2").html("나의 바다엔 뭐가<br />살까?");
-          }
-          if (main_page == 2) {
-            $(".main_img").attr({ src: "images/main1.png" });
-            $(".main_left").attr({ src: "images/main3.png" });
-            $(".main_right").attr({ src: "images/main2.png" });
-            $("#main_link").attr({ href: "https://facetest.glam.am/" });
-            $("#main_link_bt").attr({ href: "https://facetest.glam.am/" });
-            $("#main_title").text("글램");
-            $("#main_p1").text("관상으로 보는");
-            $("#main_p2").html("나의 신년 연애 <br />운세는?");
-          }
-        });
+        // $("#main_left_bt").click(function () {
+        //   main_page = main_page - 1;
+        //   if (main_page == -1) {
+        //     main_page = 2;
+        //   }
+        // });
+        // $("#main_right_bt").click(function () {
+        //   main_page = main_page + 1;
+        //   if (main_page == 3) {
+        //     main_page = 0;
+        //   }
+        // });
+        // setInterval(function () {
+        //   if (main_page == 0) {
+        //     $(".main_img").attr({ src: "images/main2.png" });
+        //     $(".main_left").attr({ src: "images/main1.png" });
+        //     $(".main_right").attr({ src: "images/main3.png" });
+        //     $("#main_link").attr({ href: "http://iamdesker.co.kr/" });
+        //     $("#main_link_bt").attr({ href: "http://iamdesker.co.kr/" });
+        //     $("#main_title").text("데스커");
+        //     $("#main_p1").text("What's in my room?");
+        //     $("#main_p2").html("나에게 꼬~옥 맞는 <br />책상은?");
+        //   }
+        //   if (main_page == 1) {
+        //     $(".main_img").attr({ src: "images/main3.png" });
+        //     $(".main_left").attr({ src: "images/main2.png" });
+        //     $(".main_right").attr({ src: "images/main1.png" });
+        //     $("#main_link").attr({ href: "http://bns003.keshsurvey.com/" });
+        //     $("#main_link_bt").attr({ href: "http://bns003.keshsurvey.com/" });
+        //     $("#main_title").text("바다 테스트");
+        //     $("#main_p1").text("알쏭달쏭한 바닷속!");
+        //     $("#main_p2").html("나의 바다엔 뭐가<br />살까?");
+        //   }
+        //   if (main_page == 2) {
+        //     $(".main_img").attr({ src: "images/main1.png" });
+        //     $(".main_left").attr({ src: "images/main3.png" });
+        //     $(".main_right").attr({ src: "images/main2.png" });
+        //     $("#main_link").attr({ href: "https://facetest.glam.am/" });
+        //     $("#main_link_bt").attr({ href: "https://facetest.glam.am/" });
+        //     $("#main_title").text("글램");
+        //     $("#main_p1").text("관상으로 보는");
+        //     $("#main_p2").html("나의 신년 연애 <br />운세는?");
+        //   }
+        // });
         // 메인 끝
         $("#nature_prev").click(function () {
           sliderX = sliderX + 110;
@@ -198,51 +188,59 @@ $(document).ready(function () {
       } else {
         // --------------------------------------------------------
         // else 1920 pc --------------------------------------------
-        // 메인
-        $("#main_left_bt").click(function () {
-          main_page = main_page - 1;
-          if (main_page == -1) {
-            main_page = 2;
-          }
-        });
-        $("#main_right_bt").click(function () {
-          main_page = main_page + 1;
-          if (main_page == 3) {
-            main_page = 0;
-          }
-        });
-        setInterval(function () {
-          if (main_page == 0) {
-            $(".main_img").attr({ src: "images/main2.png" });
-            $(".main_left").attr({ src: "images/main1.png" });
-            $(".main_right").attr({ src: "images/main3.png" });
-            $("#main_link").attr({ href: "http://iamdesker.co.kr/" });
-            $("#main_link_bt").attr({ href: "http://iamdesker.co.kr/" });
-            $("#main_title").text("데스커");
-            $("#main_p1").text("What's in my room?");
-            $("#main_p2").html("나에게 꼬~옥 맞는 <br />책상은?");
-          }
-          if (main_page == 1) {
-            $(".main_img").attr({ src: "images/main3.png" });
-            $(".main_left").attr({ src: "images/main2.png" });
-            $(".main_right").attr({ src: "images/main1.png" });
-            $("#main_link").attr({ href: "http://bns003.keshsurvey.com/" });
-            $("#main_link_bt").attr({ href: "http://bns003.keshsurvey.com/" });
-            $("#main_title").text("바다 테스트");
-            $("#main_p1").text("알쏭달쏭한 바닷속!");
-            $("#main_p2").html("나의 바다엔 뭐가<br />살까?");
-          }
-          if (main_page == 2) {
-            $(".main_img").attr({ src: "images/main1.png" });
-            $(".main_left").attr({ src: "images/main3.png" });
-            $(".main_right").attr({ src: "images/main2.png" });
-            $("#main_link").attr({ href: "https://facetest.glam.am/" });
-            $("#main_link_bt").attr({ href: "https://facetest.glam.am/" });
-            $("#main_title").text("글램");
-            $("#main_p1").text("관상으로 보는");
-            $("#main_p2").html("나의 신년 연애 <br />운세는?");
-          }
-        });
+        var pc_main_page = 0;
+        var sliderX = 0;
+        var art_slider = 0;
+        var heart_slider = 162;
+        var mbti_slider = 162;
+        var heart_first = 0;
+        var mbti_first = 0;
+        // pc 메인
+        // $("#main_left_bt").click(function () {
+        //   pc_main_page = pc_main_page - 1;
+        //   if (pc_main_page == -1) {
+        //     pc_main_page = 2;
+        //   }
+        // });
+        // $("#main_right_bt").click(function () {
+        //   pc_main_page = pc_main_page + 1;
+        //   if (pc_main_page == 3) {
+        //     pc_main_page = 0;
+        //   }
+        // });
+        // setInterval(function () {
+        //   $("h1").text(pc_main_page);
+        //   if (pc_main_page == 0) {
+        //     $(".main_img").attr({ src: "images/main2.png" });
+        //     $(".main_left").attr({ src: "images/main1.png" });
+        //     $(".main_right").attr({ src: "images/main3.png" });
+        //     $("#main_link").attr({ href: "http://iamdesker.co.kr/" });
+        //     $("#main_link_bt").attr({ href: "http://iamdesker.co.kr/" });
+        //     $("#main_title").text("데스커");
+        //     $("#main_p1").text("What's in my room?");
+        //     $("#main_p2").html("나에게 꼬~옥 맞는 <br />책상은?");
+        //   }
+        //   if (pc_main_page == 1) {
+        //     $(".main_img").attr({ src: "images/main3.png" });
+        //     $(".main_left").attr({ src: "images/main2.png" });
+        //     $(".main_right").attr({ src: "images/main1.png" });
+        //     $("#main_link").attr({ href: "http://bns003.keshsurvey.com/" });
+        //     $("#main_link_bt").attr({ href: "http://bns003.keshsurvey.com/" });
+        //     $("#main_title").text("바다 테스트");
+        //     $("#main_p1").text("알쏭달쏭한 바닷속!");
+        //     $("#main_p2").html("나의 바다엔 뭐가<br />살까?");
+        //   }
+        //   if (pc_main_page == 2) {
+        //     $(".main_img").attr({ src: "images/main1.png" });
+        //     $(".main_left").attr({ src: "images/main3.png" });
+        //     $(".main_right").attr({ src: "images/main2.png" });
+        //     $("#main_link").attr({ href: "https://facetest.glam.am/" });
+        //     $("#main_link_bt").attr({ href: "https://facetest.glam.am/" });
+        //     $("#main_title").text("글램");
+        //     $("#main_p1").text("관상으로 보는");
+        //     $("#main_p2").html("나의 신년 연애 <br />운세는?");
+        //   }
+        // });
         // 메인 끝
         //   환경 슬라이더
         $("#nature_prev").click(function () {
@@ -310,7 +308,7 @@ $(document).ready(function () {
         });
         //   마음 슬라이더
         $("#heart_prev").click(function () {
-          if ( heart_first == 0 ) {
+          if (heart_first == 0) {
             $(".heart_slide").stop().animate({ left: heart_slider });
             heart_first = 1;
           } else {
@@ -328,7 +326,6 @@ $(document).ready(function () {
               $(".heart_slide").stop().animate({ left: heart_slider });
             }
           }
-
         });
         $("#heart_next").click(function () {
           heart_slider = heart_slider - 324;
@@ -347,9 +344,9 @@ $(document).ready(function () {
           }
         });
         //  mbti 슬라이더
-  
+
         $("#mbti_prev").click(function () {
-          if ( mbti_first == 0 ) {
+          if (mbti_first == 0) {
             $(".mbti_slide").stop().animate({ left: mbti_slider });
             mbti_first = 1;
           } else {
