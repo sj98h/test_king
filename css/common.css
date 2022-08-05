@@ -178,6 +178,7 @@ section {
   height: 100vh;
   background-color: #fff;
   overflow: hidden;
+  position: relative;
 }
 .art_section {
   width: 100%;
@@ -214,18 +215,22 @@ section {
 .swiper-button-prev {
   width: 71px;
   height: 71px;
-  position: absolute;
+  /* position: absolute;
   top: 0;
   bottom: 80px;
-  margin: auto;
+  left: 0%;
+  margin: auto; */
+  left: 5%;
 }
 .swiper-button-next {
   width: 71px;
   height: 71px;
-  position: absolute;
+  /* position: absolute;
   top: 0;
   bottom: 80px;
-  margin: auto;
+  right: 0%;
+  margin: auto; */
+  right: 5%;
 }
 /* 환경---------------------------------- */
 .sub_title {
@@ -245,7 +250,7 @@ section {
   margin-top: 5px;
   text-align: center;
 }
-.nature_wrap {
+/* .nature_wrap {
   width: 100%;
   height: 462px;
   display: flex;
@@ -283,10 +288,15 @@ section {
   margin-top: 69px;
 }
 /* 스와이퍼 css */
+.swiper_flex {
+  display: flex;
+  align-items: center;
+}
 .body_swiper {
-  width: 90%;
-  height: 550px;
+  width: 75%;
+  height: fit-content;
   margin-top: 70px;
+  padding: 0 10px 30px;
 }
 .body_swiper_wrapper {
   width: 80%;
@@ -448,10 +458,10 @@ footer {
   height: 100vh;
 }
 .marquee-inner.to-left {
-  animation: marqueeLeft 25s linear infinite;
+  animation: marqueeLeft 60s linear infinite;
 }
 .marquee-inner.to-right {
-  animation: marqueeRight 25s linear infinite;
+  animation: marqueeRight 60s linear infinite;
 }
 /* ------------------------- */
 .marquee-wrapper .container {
@@ -617,7 +627,7 @@ footer {
     width: 50px;
     height: 50px;
   }
-  .swiper-button-prev {
+  /* .swiper-button-prev {
   position: absolute;
   top: 0;
   bottom: 35%;
@@ -628,7 +638,7 @@ footer {
   top: 0;
   bottom: 35%;
   margin: auto;
-}
+} */
 .sub_title {
   font-size: 18px;
   margin-top: 60px;
@@ -826,14 +836,14 @@ footer {
     margin-top: 0;
   }
   /* 버튼 */
-  .swiper-button-prev {
+  /* .swiper-button-prev {
     position: absolute;
     top: 10%;
   }
   .swiper-button-next {
     position: absolute;
     top: 10%;
-  }
+  } */
   /* 환경---------- */
   .nature_section {
     height: 472px;
